@@ -1,23 +1,16 @@
 #include <iostream>
-using namespace std;
+#include <vector>
 
-namespace first
-{
-    int x = 0;
-}
-namespace second
-{
-    int x = 1;
-}
+// typedef std::vector<std::pair<std::string, int>> pairlist_t;
+
+typedef std::string text_t; // text_t is an identifier
+
 int main()
 {
-    int x = 2;
+    std::string firstName;
 
-    cout << first::x;  //:: is scope resolution operator
-    cout << second::x; // entities can have the same name, as long as they are in a different namespace
+    //---OR---
+    text_t firstName = "Bro"; // replace the datatype with the new identifier
 
-    //---you can also do---
-    using namespace first;
-
-    cout << x;
+    std::cout << firstName << '\n';
 }
