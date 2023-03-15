@@ -1,20 +1,20 @@
 #include <iostream>
-
-// cout << (insertion operator)
-// cint >> (extraction operator)
+#include <cmath>
 
 int main()
 {
-    std::string name;
-    int age;
+    double x = 3.14;
+    double y = 4;
+    double z;
 
-    std::cout << "How old are you? ";
-    std::cin >> age;
+    // z = std::max(x, y);
+    // z = std::min(x, y);
+    // z = pow(2, 3);
+    // z = sqrt(9);
+    // z = abs(-3);
+    // z = round(x);
+    // z = ceil(x); //rounds up
+    z = floor(x); // always rounds down
 
-    std::cout << "What is your full name? ";
-    std::getline(std::cin >> std::ws, name); // getline accepts input with spaces in between
-                                             // ws eliminates white space that comes before
-
-    std::cout << "Hello " << name << '\n';
-    std::cout << "You are " << age << " years old";
+    std::cout << z;
 }
