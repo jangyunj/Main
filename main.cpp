@@ -1,10 +1,19 @@
 #include <iostream>
 
+// cout << (insertion operator)
+// cint >> (extraction operator)
+
 int main()
 {
-    int correct = 8;
-    int questions = 10;
+    std::string name;
+    int age;
 
-    double score = correct / (double)questions * 100; // type conversion is used here so that division will return a double
-    std::cout << score << "%";
+    std::cout << "What is your name? ";
+    std::cin >> name; // stores user input to this variable
+
+    std::cout << "What is your age? ";
+    std::cin >> age;
+
+    std::cout << "Hello " << name << '\n';
+    std::cout << "You are " << age << " years old";
 }
