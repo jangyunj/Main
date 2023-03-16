@@ -2,51 +2,43 @@
 
 int main()
 {
-    // switch - alternative to else if statements; compares one value against matching cases
+    char op;
+    double num1;
+    double num2;
+    double result;
 
-    int month;
-    std::cout << "Enter the month (1-12): ";
-    std::cin >> month;
+    std::cout << "*********Calculator**********\n";
 
-    switch (month)
+    std::cout << "Enter your operator (+, -, *, /): ";
+    std::cin >> op;
+
+    std::cout << "Enter #1: ";
+    std::cin >> num1;
+
+    std::cout << "Enter #2: ";
+    std::cin >> num2;
+
+    switch (op)
     {
-    case 1:
-        std::cout << "January";
+    case '+':
+        result = num1 + num2;
+        std::cout << "Result: " << result << '\n';
         break;
-    case 2:
-        std::cout << "February";
+    case '-':
+        result = num1 - num2;
+        std::cout << "Result: " << result << '\n';
         break;
-    case 3:
-        std::cout << "March";
+    case '*':
+        result = num1 * num2;
+        std::cout << "Result: " << result << '\n';
         break;
-    case 4:
-        std::cout << "April";
-        break;
-    case 5:
-        std::cout << "May";
-        break;
-    case 6:
-        std::cout << "June";
-        break;
-    case 7:
-        std::cout << "July";
-        break;
-    case 8:
-        std::cout << "August";
-        break;
-    case 9:
-        std::cout << "September";
-        break;
-    case 10:
-        std::cout << "October";
-        break;
-    case 11:
-        std::cout << "November";
-        break;
-    case 12:
-        std::cout << "December";
+    case '/':
+        result = num1 / num2;
+        std::cout << "Result: " << result << '\n';
         break;
     default:
-        std::cout << "Enter a valid number (1-12)";
+        std::cout << "Enter a valid operator";
     }
+
+    std::cout << "*****************************";
 }
