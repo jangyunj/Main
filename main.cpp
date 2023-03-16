@@ -2,43 +2,20 @@
 
 int main()
 {
-    char op;
-    double num1;
-    double num2;
-    double result;
+    // int grade = 75;
 
-    std::cout << "*********Calculator**********\n";
+    // if (grade >= 60) {
+    //     std::cout << "You passed!";
+    // }
+    // else {
+    //     std::cout << "You failed.";
+    // }
 
-    std::cout << "Enter your operator (+, -, *, /): ";
-    std::cin >> op;
+    //********** condition ? expression1 : expression2 **********
+    int grade;
 
-    std::cout << "Enter #1: ";
-    std::cin >> num1;
+    std::cout << "Enter your grade for this year: ";
+    std::cin >> grade;
 
-    std::cout << "Enter #2: ";
-    std::cin >> num2;
-
-    switch (op)
-    {
-    case '+':
-        result = num1 + num2;
-        std::cout << "Result: " << result << '\n';
-        break;
-    case '-':
-        result = num1 - num2;
-        std::cout << "Result: " << result << '\n';
-        break;
-    case '*':
-        result = num1 * num2;
-        std::cout << "Result: " << result << '\n';
-        break;
-    case '/':
-        result = num1 / num2;
-        std::cout << "Result: " << result << '\n';
-        break;
-    default:
-        std::cout << "Enter a valid operator";
-    }
-
-    std::cout << "*****************************";
+    grade >= 60 ? std::cout << "You passed!" : std::cout << "You failed.";
 }
