@@ -12,10 +12,19 @@ int main()
     // }
 
     //********** condition ? expression1 : expression2 **********
-    int grade;
+    // int grade;
 
-    std::cout << "Enter your grade for this year: ";
-    std::cin >> grade;
+    // std::cout << "Enter your grade for this year: ";
+    // std::cin >> grade;
 
-    grade >= 60 ? std::cout << "You passed!" : std::cout << "You failed.";
+    // grade >= 60 ? std::cout << "You passed!" : std::cout << "You failed.";
+
+    int number;
+
+    std::cout << "Enter a number: ";
+    std::cin >> number;
+
+    // number % 2 != 0 ? std::cout << "odd" : std::cout << "even";
+    //--or--
+    number % 2 ? std::cout << "odd" : std::cout << "even"; // It's implied that: 1 is true, 0 is false
 }
