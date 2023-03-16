@@ -19,12 +19,19 @@ int main()
 
     // grade >= 60 ? std::cout << "You passed!" : std::cout << "You failed.";
 
-    int number;
+    // int number;
 
-    std::cout << "Enter a number: ";
-    std::cin >> number;
+    // std::cout << "Enter a number: ";
+    // std::cin >> number;
 
-    // number % 2 != 0 ? std::cout << "odd" : std::cout << "even";
-    //--or--
-    number % 2 ? std::cout << "odd" : std::cout << "even"; // It's implied that: 1 is true, 0 is false
+    // // number % 2 != 0 ? std::cout << "odd" : std::cout << "even";
+    // //--or--
+    // number % 2 ? std::cout << "odd" : std::cout << "even"; // It's implied that: 1 is true, 0 is false
+
+    bool hungry = false;
+
+    hungry ? std::cout << "You are hungry" : std::cout << "You are full"; // Condition not specified means true
+
+    //--OR--
+    std::cout << (hungry ? "You are hungry" : "You are full");
 }
