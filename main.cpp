@@ -2,36 +2,39 @@
 
 int main()
 {
-    // int grade = 75;
+    int temp;
+    bool sunny = false;
+    // std::cout << "Enter the temperature in Celcius: ";
+    // std::cin >> temp;
 
-    // if (grade >= 60) {
-    //     std::cout << "You passed!";
+    // if (temp > 0 && temp < 30){
+    //     std::cout << "The temperature is good";
+    // } else {
+    //     std::cout << "The temperature is bad";
     // }
-    // else {
-    //     std::cout << "You failed.";
+
+    // if (temp <= 0 || temp >= 30){
+    //     std::cout << "The temperature is good";
+    // } else {
+    //     std::cout << "The temperature is bad";
     // }
 
-    //********** condition ? expression1 : expression2 **********
-    // int grade;
-
-    // std::cout << "Enter your grade for this year: ";
-    // std::cin >> grade;
-
-    // grade >= 60 ? std::cout << "You passed!" : std::cout << "You failed.";
-
-    // int number;
-
-    // std::cout << "Enter a number: ";
-    // std::cin >> number;
-
-    // // number % 2 != 0 ? std::cout << "odd" : std::cout << "even";
-    // //--or--
-    // number % 2 ? std::cout << "odd" : std::cout << "even"; // It's implied that: 1 is true, 0 is false
-
-    bool hungry = false;
-
-    hungry ? std::cout << "You are hungry" : std::cout << "You are full"; // Condition not specified means true
+    if (sunny)
+    {
+        std::cout << "It is sunny today";
+    }
+    else
+    {
+        std::cout << "It is cloudy today";
+    }
 
     //--OR--
-    std::cout << (hungry ? "You are hungry" : "You are full");
+    if (!sunny)
+    {
+        std::cout << "It is cloudy today";
+    }
+    else
+    {
+        std::cout << "It is sunny today";
+    }
 }

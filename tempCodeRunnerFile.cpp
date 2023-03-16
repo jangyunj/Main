@@ -1,1 +1,2 @@
-number % 2 != 0 ? std::cout << "odd" : std::cout << "even";
+std::cout << "Enter the temperature in Celcius: ";
+    // std::cin >> temp;
