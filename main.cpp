@@ -1,26 +1,13 @@
 #include <iostream>
+#include <ctime>
 
 int main()
 {
-    int rows;
-    int columns;
-    char symbol;
+    // pseudo-random: not truly random but close (will work for rolling dice example)
 
-    std::cout << "Enter rows: ";
-    std::cin >> rows;
+    srand(time(NULL));
 
-    std::cout << "Enter columns: ";
-    std::cin >> columns;
+    int num = (rand() % 6) + 1;
 
-    std::cout << "Enter symbol: ";
-    std::cin >> symbol;
-
-    for (int i = 1; i <= rows; i++)
-    {
-        for (int j = 1; j <= columns; j++)
-        {
-            std::cout << symbol;
-        }
-        std::cout << '\n';
-    }
+    std::cout << num;
 }
