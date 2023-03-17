@@ -2,21 +2,16 @@
 
 int main()
 {
-    std::string name;
+    // Do while loop - do something first, THEN repeat again if condition is true
+    // An example where it's useful: At the end of a game, ask the user if he/she wants to play again and then repeat the game
 
-    // While is like an if statement. it will continue as long as the condition is true and will exit when false.
+    int number;
 
-    while (name.empty())
+    do
     {
-        std::cout << "Enter your name: ";
-        std::getline(std::cin, name);
-    }
+        std::cout << "Enter a positive number: ";
+        std::cin >> number;
+    } while (number < 0);
 
-    // Example of infinite loop:
-    while (1 == 1)
-    {
-        std::cout << "Help! I'm stuck in an infinite loop!";
-    }
-
-    std::cout << "Hello " << name;
+    std::cout << "The number is " << number;
 }
