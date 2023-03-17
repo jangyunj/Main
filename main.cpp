@@ -33,11 +33,15 @@ int main()
 
     // std::cout << "Hello " << name;
 
-    std::cout << name.at(0); // 0 index
+    // std::cout << name.at(0); // 0 index
 
-    std::cout << name.at(1); // 1 index
+    // std::cout << name.at(1); // 1 index
 
-    name.insert(0, "@"); // insert at this index
+    // name.insert(0, "@"); // insert at this index
+
+    std::cout << name.find(' '); // finds the white space
+
+    std::cout << name.erase(0, 3); // erases from beginning, end(not inclusive)
 
     std::cout << name;
 }
