@@ -2,16 +2,15 @@
 
 int main()
 {
-    for (int i = 1; i <= 10; i++)
+    // For loops are used when codes are executed for CERTAIN NUMBER of times
+    for (int i = 10; i >= 0; i--)
     {
         std::cout << i << '\n';
     }
-    std::cout << "Happy New Year";
 
-    // increment by 2
-    for (int i = 1; i <= 10; i += 2)
+    // decrement by 2
+    for (int i = 10; i >= 0; i -= 2)
     {
         std::cout << i << '\n';
     }
-    std::cout << "Happy New Year";
 }
