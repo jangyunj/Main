@@ -2,36 +2,17 @@
 
 int main()
 {
-    double temp;
-    char unit;
+    std::string name;
 
-    std::cout << "***Temperature Conversion*** \n";
-    std::cout << "F = Fahrenheit\n";
-    std::cout << "C = Celcius\n";
-    std::cout << "What unit would you like to convert to? ";
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, name); // to accomodate for possible space
 
-    std::cin >> unit;
-
-    if (unit == 'F' || unit == 'f')
+    if (name.length() > 12)
     {
-        std::cout << "Enter the temperature in Celcius: ";
-        std::cin >> temp;
-
-        temp = (1.8 * temp) + 32.0;
-        std::cout << "Temperature is: " << temp << "F\n";
-    }
-    else if (unit == 'C' || unit == 'c')
-    {
-        std::cout << "Enter the temperature in Fahrenheit: ";
-        std::cin >> temp;
-
-        temp = (temp - 32) / 1.8;
-        std::cout << "Temperature is: " << temp << "C\n";
+        std::cout << "Your name is too long";
     }
     else
     {
-        std::cout << "Enter a valid temperature";
+        std::cout << "Welcome to the class " << name;
     }
-
-    std::cout << "****************************";
 }
