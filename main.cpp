@@ -4,44 +4,19 @@ int main()
 {
     std::string name;
 
-    std::cout << "Enter your name: ";
-    std::getline(std::cin, name); // to accomodate for possible space
+    // While is like an if statement. it will continue as long as the condition is true and will exit when false.
 
-    // if (name.length() > 12)
-    // {
-    //     std::cout << "Your name is too long";
-    // }
-    // else
-    // {
-    //     std::cout << "Welcome to the class " << name;
-    // }
+    while (name.empty())
+    {
+        std::cout << "Enter your name: ";
+        std::getline(std::cin, name);
+    }
 
-    // if (name.empty()) //this is boolean
-    // {
-    //     std::cout << "You left the field blank";
-    // }
-    // else
-    // {
-    //     std::cout << "Hello " << name;
-    // }
+    // Example of infinite loop:
+    while (1 == 1)
+    {
+        std::cout << "Help! I'm stuck in an infinite loop!";
+    }
 
-    // name.append("@gmail.com"); // appends something
-
-    // std::cout << "Your username is " << name;
-
-    // name.clear(); // clears the name
-
-    // std::cout << "Hello " << name;
-
-    // std::cout << name.at(0); // 0 index
-
-    // std::cout << name.at(1); // 1 index
-
-    // name.insert(0, "@"); // insert at this index
-
-    std::cout << name.find(' '); // finds the white space
-
-    std::cout << name.erase(0, 3); // erases from beginning, end(not inclusive)
-
-    std::cout << name;
+    std::cout << "Hello " << name;
 }
