@@ -16,12 +16,20 @@ int main()
     //     std::cout << "Welcome to the class " << name;
     // }
 
-    if (name.empty())
-    {
-        std::cout << "You left the field blank";
-    }
-    else
-    {
-        std::cout << "Hello " << name;
-    }
+    // if (name.empty()) //this is boolean
+    // {
+    //     std::cout << "You left the field blank";
+    // }
+    // else
+    // {
+    //     std::cout << "Hello " << name;
+    // }
+
+    name.append("@gmail.com"); // appends something
+
+    std::cout << "Your username is " << name;
+
+    name.clear(); // clears the name
+
+    std::cout << "Hello " << name;
 }
