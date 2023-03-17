@@ -25,11 +25,19 @@ int main()
     //     std::cout << "Hello " << name;
     // }
 
-    name.append("@gmail.com"); // appends something
+    // name.append("@gmail.com"); // appends something
 
-    std::cout << "Your username is " << name;
+    // std::cout << "Your username is " << name;
 
-    name.clear(); // clears the name
+    // name.clear(); // clears the name
 
-    std::cout << "Hello " << name;
+    // std::cout << "Hello " << name;
+
+    std::cout << name.at(0); // 0 index
+
+    std::cout << name.at(1); // 1 index
+
+    name.insert(0, "@"); // insert at this index
+
+    std::cout << name;
 }
