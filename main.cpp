@@ -2,23 +2,13 @@
 
 int main()
 {
-    // break : break out of a loop
-    // continue : skip current iteration
-
-    for (int i = 1; i <= 20; i++)
+    // Nested loops - For 3 times, count upto 10
+    for (int i = 1; i <= 3; i++)
     {
-        if (i == 13)
+        for (int j = 1; j <= 10; j++)
         {
-            break;
+            std::cout << j << ' ';
         }
-        std::cout << i << '\n';
-    }
-    for (int i = 1; i <= 20; i++)
-    {
-        if (i == 13)
-        {
-            continue;
-        }
-        std::cout << i << '\n';
+        std::cout << '\n';
     }
 }
