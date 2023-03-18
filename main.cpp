@@ -3,11 +3,25 @@
 
 int main()
 {
-    // pseudo-random: not truly random but close (will work for rolling dice example)
+    srand(time(0)); // uses current time as a seed to generate random numbers
+    int randNum = rand() % 5 + 1;
 
-    srand(time(NULL));
-
-    int num = (rand() % 6) + 1;
-
-    std::cout << num;
+    switch (randNum)
+    {
+    case 1:
+        std::cout << "You win a tshirt\n";
+        break;
+    case 2:
+        std::cout << "You win a car\n";
+        break;
+    case 3:
+        std::cout << "You win a bicycle\n";
+        break;
+    case 4:
+        std::cout << "You win a computer\n";
+        break;
+    case 5:
+        std::cout << "You win a tv\n";
+        break;
+    }
 }
