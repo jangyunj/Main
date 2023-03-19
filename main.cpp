@@ -1,17 +1,24 @@
 #include <iostream>
 
-std::string concatStrings(std::string string1, std::string string2);
+// overloaded functions -
+
+// functions with the same name can be used. however, you need a different set of parameters
+// function signature = function name + parameter
+// each function signature needs to be unique
+
+void bakePizza(std::string topping1, std::string topping2);
 
 int main()
 {
-    std::string firstName = "Yun";
-    std::string lastName = "Jang";
-    std::string fullName = concatStrings(firstName, lastName); // arguments
-
-    std::cout << "Hello " << fullName;
+    bakePizza("pepperoni", "mushrooms");
 }
 
-std::string concatStrings(std::string string1, std::string string2)
+void bakePizza(std::string topping1)
 {
-    return string1 + " " + string2;
+    std::cout << "I would like " << topping1;
+}
+
+void bakePizza(std::string topping1, std::string topping2)
+{
+    std::cout << "I would like " << topping1 << " and " << topping2 << " pizza";
 }
