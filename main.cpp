@@ -1,25 +1,17 @@
 #include <iostream>
 
-double square(double length);
-double cube(double length);
+std::string concatStrings(std::string string1, std::string string2);
 
 int main()
 {
-    double length;
-    std::cout << "Enter length: ";
-    std::cin >> length;
+    std::string firstName = "Yun";
+    std::string lastName = "Jang";
+    std::string fullName = concatStrings(firstName, lastName); // arguments
 
-    double area = square(length);
-    double volume = cube(length);
-    std::cout << "The area of a square is: " << area << "cm^2\n";
-    std::cout << "The volume of a square is: " << volume << "cm^3\n";
+    std::cout << "Hello " << fullName;
 }
 
-double square(double length)
+std::string concatStrings(std::string string1, std::string string2)
 {
-    return length * length;
-}
-double cube(double length)
-{
-    return length * length * length;
+    return string1 + " " + string2;
 }
