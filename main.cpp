@@ -1,23 +1,25 @@
 #include <iostream>
 
-// You can declare before the main function, then define them later
+double square(double length);
+double cube(double length);
 
-// Declaring fx
-void happyBirthday(std::string name, int age); // fx declaration
-
-// Calling fx
 int main()
 {
-    std::string name = "Bro";
-    int age = 21;
-    happyBirthday(name, age); // argument
+    double length;
+    std::cout << "Enter length: ";
+    std::cin >> length;
+
+    double area = square(length);
+    double volume = cube(length);
+    std::cout << "The area of a square is: " << area << "cm^2\n";
+    std::cout << "The volume of a square is: " << volume << "cm^3\n";
 }
 
-// Defining fx
-void happyBirthday(std::string name, int age) // parameters
+double square(double length)
 {
-    std::cout << "Happy Birthday to " << name << '\n';
-    std::cout << "Happy Birthday to " << name << '\n';
-    std::cout << "Happy Birthday to " << name << '\n';
-    std::cout << "You are " << age << " years old";
+    return length * length;
+}
+double cube(double length)
+{
+    return length * length * length;
 }
