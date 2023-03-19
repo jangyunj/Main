@@ -1,27 +1,33 @@
 #include <iostream>
-#include <ctime>
+#include <cmath>
 
 int main()
 {
-    srand(time(0)); // uses current time as a seed to generate random numbers
-    int randNum = rand() % 5 + 1;
+    int num;
+    int guess;
+    int tries;
 
-    switch (randNum)
+    srand(time(NULL));
+    num = rand() % 100 + 1;
+
+    do
     {
-    case 1:
-        std::cout << "You win a tshirt\n";
-        break;
-    case 2:
-        std::cout << "You win a car\n";
-        break;
-    case 3:
-        std::cout << "You win a bicycle\n";
-        break;
-    case 4:
-        std::cout << "You win a computer\n";
-        break;
-    case 5:
-        std::cout << "You win a tv\n";
-        break;
-    }
+        std::cout << "Enter a guess between 1 and 100: ";
+        std::cin >> guess;
+        tries++;
+
+        if (guess < num)
+        {
+            std::cout << "Guess is too low\n";
+        }
+        else if (guess > num)
+        {
+            std::cout << "Guess is too high\n";
+        }
+        else
+        {
+            std::cout << "Correct! The number of attempts was " << tries;
+        }
+
+    } while (guess != num);
 }
