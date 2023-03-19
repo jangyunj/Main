@@ -1,24 +1,24 @@
 #include <iostream>
 
-// overloaded functions -
+// local variable - declared inside a function or block{}
+// global variable - declared outside of all functions
+// local variable takes precedence over global var
+// use "Scope Resolution Operator" to make global var take precedence ::
+// avoid global var because it pollutes the global namespace and is less secure
 
-// functions with the same name can be used. however, you need a different set of parameters
-// function signature = function name + parameter
-// each function signature needs to be unique
+int myNum = 3;
 
-void bakePizza(std::string topping1, std::string topping2);
+void printNum(); // this prints FIRST
 
 int main()
 {
-    bakePizza("pepperoni", "mushrooms");
+    int myNum = 1;
+    printNum();           // this prints SECOND
+    std::cout << ::myNum; // scope resolution operator - allows global var to take precedence
 }
 
-void bakePizza(std::string topping1)
+void printNum()
 {
-    std::cout << "I would like " << topping1;
-}
-
-void bakePizza(std::string topping1, std::string topping2)
-{
-    std::cout << "I would like " << topping1 << " and " << topping2 << " pizza";
+    int myNum = 2;
+    std::cout << myNum;
 }
